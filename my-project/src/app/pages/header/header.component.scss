@@ -7,14 +7,10 @@ header{
   font-size: 20px;
   line-height: 22px;
   main{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
 
-    .web-name{
-      width: 99px;
-      height: 34px;
+    .header-tool{
+
     }
 
     .search-box{
@@ -35,9 +31,6 @@ header{
 
 
     .left-btn{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
       >div{
         cursor: pointer;
@@ -45,10 +38,6 @@ header{
         height: 52px;
         border-radius: 10px;
         background: var(--secondary);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 8px;
       }
     }
   }
