@@ -3,12 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {AppRoutingModule, ArrayOfComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './pages/header/header.component';
+import { AsideComponent } from './pages/aside/aside.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArrayOfComponents
+    ArrayOfComponents,
+    HeaderComponent,
+    AsideComponent
   ],
   imports: [
     BrowserModule,
