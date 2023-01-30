@@ -2,4 +2,24 @@
   width: 260px;
   background-color: var(--primary);
   height: 100vh;
+
+  > div {
+    display: flex;
+    justify-content: end;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    margin: 30px 10px;
+    list-style: none;
+    color: var(--secondary);
+    cursor: pointer;
+
+    i {
+      margin-right: 10px;
+    }
+  }
 }

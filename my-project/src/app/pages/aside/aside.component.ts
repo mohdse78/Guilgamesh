@@ -10,7 +10,7 @@ export class AsideComponent {
     {title: 'Feed', icon: 'feed.svg'},
     {title: 'Just OKs', icon: 'check-circle.svg'},
     {title: 'Review', icon: 'magic-star.svg'},
-    {title: 'Message', icon: 'email'},
+    {title: 'Message', icon: 'email.svg'},
     {title: 'Saved', icon: 'book-mark.svg'},
     {title: 'Settings', icon: 'setting.svg'},
   ]

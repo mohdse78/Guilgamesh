@@ -1,9 +1,12 @@
 <div class="aside-container">
-  <ul>
-    <li *ngFor="let item of items">
-      <div>
-        <i></i>
-      </div>
-    </li>
-  </ul>
+  <div>
+    <ul>
+      <li *ngFor="let item of items">
+        <div>
+          <i [inlineSVG]="'assets/icons/' + item.icon"></i>
+          {{item.title}}
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
