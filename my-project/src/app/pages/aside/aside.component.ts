@@ -13,10 +13,13 @@ export class AsideComponent {
     {id: 4, title: 'Message', icon: 'email.svg'},
     {id: 5, title: 'Saved', icon: 'book-mark.svg'},
     {id: 6, title: 'Settings', icon: 'setting.svg'},
-  ]
+  ];
+  activeGiftStyle: boolean = false;
 
 
   selectedItem(id: number) {
+    this.activeGiftStyle = (id == 0);
+
     this.items.forEach(item => item.isSelect = false);
     let itemSelected = this.items.find(item => item.id == id);
     itemSelected.isSelect = true;
