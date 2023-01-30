@@ -1,0 +1,55 @@
+header{
+  background: var(--primary);
+  color: var(--secondary);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .web-name{
+      width: 99px;
+      height: 34px;
+    }
+
+    .search-box{
+      background: var(--white);
+      border: 1px solid var(--secondary);
+      border-radius: 6px;
+      width: 47px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .new-possition{
+      background: var(--secondary);
+      border-radius: 6px;
+      color: var(--white);
+    }
+
+
+    .left-btn{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      >div{
+        cursor: pointer;
+        width: 52px;
+        height: 52px;
+        border-radius: 10px;
+        background: var(--secondary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 8px;
+      }
+    }
+  }
+}
