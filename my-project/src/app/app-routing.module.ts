@@ -3,14 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {FirstComponent} from "./first/first.component";
 import {SecondComponent} from "./second/second.component";
 import {ThirdComponent} from "./third/third.component";
-import {AppComponent} from "./app.component";
 
-const routes: Routes = [
-  {path: '', component: AppComponent},
-  {path: 'first-validation', component: FirstComponent},
-  {path: 'second-validation', component: SecondComponent},
-  {path: 'third-validation', component: ThirdComponent}
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule, ArrayOfComponents} from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './pages/header/header.component';
-import { AsideComponent } from './pages/aside/aside.component';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './pages/header/header.component';
+import {AsideComponent} from './pages/aside/aside.component';
+import {HttpClientModule} from "@angular/common/http";
+import {InlineSVGModule} from "ng-inline-svg";
 
 
 @NgModule({
@@ -15,10 +16,13 @@ import { AsideComponent } from './pages/aside/aside.component';
     AsideComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule,
+    InlineSVGModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

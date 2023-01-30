@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-aside',
@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./aside.component.scss']
 })
 export class AsideComponent {
+  items: any[] = [
+    {title: 'Feed', icon: 'feed.svg'},
+    {title: 'Just OKs', icon: 'check-circle.svg'},
+    {title: 'Review', icon: 'magic-star.svg'},
+    {title: 'Message', icon: 'email'},
+    {title: 'Saved', icon: 'book-mark.svg'},
+    {title: 'Settings', icon: 'setting.svg'},
+  ]
 
 }
