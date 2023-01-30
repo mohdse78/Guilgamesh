@@ -1,5 +1,5 @@
 <div class="aside-container">
-  <div>
+  <div class="item-container">
     <ul>
       <li *ngFor="let item of items">
         <div class="flex mr-5" (click)="selectedItem(item.id)" [class.is-selected]="item.isSelect">
@@ -8,5 +8,9 @@
         </div>
       </li>
     </ul>
+  </div>
+  <div class="gift-item mr-10" (click)="selectedItem(0)" [class.is-selected]="activeGiftStyle">
+    <i class="mr-3" inlineSVG="assets/icons/gift.svg"></i>
+    Invite Friends
   </div>
 </div>

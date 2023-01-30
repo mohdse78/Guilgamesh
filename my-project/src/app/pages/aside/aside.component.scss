@@ -1,11 +1,24 @@
 .aside-container {
-  width: 260px;
+  width: 220px;
   background-color: var(--primary);
   height: 100vh;
 
-  > div {
+  .item-container {
     display: flex;
     justify-content: end;
+  }
+
+  .gift-item {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: end;
+    list-style: none;
+    color: var(--secondary);
+    cursor: pointer;
+
+    &.is-selected {
+      font-weight: bold;
+    }
   }
 
   ul {
