@@ -1,19 +1,25 @@
-header{
+header {
   background: var(--primary);
   color: var(--secondary);
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
   font-size: 20px;
-  line-height: 22px;
-  main{
+  height: 100px;
+  border-bottom: 2px solid var(--secondary);
 
 
-    .header-tool{
+  main {
+    height: 100%;
 
+    .web-name {
+      width: 20%;
+      justify-content: center;
+      align-items: center;
     }
 
-    .search-box{
+    .header-tool {
+      width: 75%;
+    }
+
+    .search-box {
       background: var(--white);
       border: 1px solid var(--secondary);
       border-radius: 6px;
@@ -23,16 +29,21 @@ header{
       justify-content: center;
       align-items: center;
     }
-    .new-possition{
+
+    .new-possition {
       background: var(--secondary);
       border-radius: 6px;
       color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
     }
 
 
-    .left-btn{
+    .left-btn {
 
-      >div{
+      > div {
         cursor: pointer;
         width: 52px;
         height: 52px;

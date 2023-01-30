@@ -1,15 +1,21 @@
 <header>
-  <main>
-    <div class="web-name">
-        <h1><i [inlineSVG]="'assets/icons/Frame%20238934.svg'"></i>Kojust</h1>
+  <main class="flex">
+    <div class="web-name flex">
+      <i [inlineSVG]="'assets/icons/logo.svg'"></i>
     </div>
-    <div class="flex justify-between items-center w-75">
-      <div>
-        <div class="search-box"><i [inlineSVG]="'assets/icons/search.svg'"></i></div>
-        <div class="new-possition"><i [inlineSVG]="'assets/icons/plus.svg'"></i>New position</div>
+    <div class="flex justify-between items-center header-tool">
+      <div class="flex items-center">
+        <div class="search-box mr-4 cursor-pointer">
+          <i [inlineSVG]="'assets/icons/search.svg'"></i>
+        </div>
+        <div class="new-possition cursor-pointer">
+          <i class="mr-3" [inlineSVG]="'assets/icons/plus.svg'"></i>
+          New position
+        </div>
       </div>
       <div class="left-btn flex justify-between items-center">
-        <div class="flex justify-center items-center mr-4"><i [inlineSVG]="'assets/icons/notification-bing.svg'"></i></div>
+        <div class="flex justify-center items-center mr-4"><i [inlineSVG]="'assets/icons/notification-bing.svg'"></i>
+        </div>
         <div class="flex justify-center items-center"><i [inlineSVG]="'assets/icons/user.svg'"></i></div>
       </div>
     </div>
