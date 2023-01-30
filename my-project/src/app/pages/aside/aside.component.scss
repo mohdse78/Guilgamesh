@@ -10,6 +10,7 @@
 
   ul {
     padding: 0;
+    width: 140px;
   }
 
   li {
@@ -20,6 +21,10 @@
 
     i {
       margin-right: 10px;
+    }
+
+    .is-selected {
+      font-weight: bold;
     }
   }
 }

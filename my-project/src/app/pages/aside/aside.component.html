@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li *ngFor="let item of items">
-        <div>
+        <div class="flex mr-5" (click)="selectedItem(item.id)" [class.is-selected]="item.isSelect">
           <i [inlineSVG]="'assets/icons/' + item.icon"></i>
           {{item.title}}
         </div>
