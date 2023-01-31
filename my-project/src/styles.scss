@@ -7,3 +7,29 @@
   --secondary: #667080;
   --white: #FFF;
 }
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.form-group {
+  padding: 12px;
+  height: 50px;
+  border: 1px solid var(--secondary);
+  border-radius: 6px;
+  width: 100%;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--secondary);
+}
