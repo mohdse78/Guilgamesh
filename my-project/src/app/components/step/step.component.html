@@ -1,0 +1,9 @@
+<div class="flex justify-center items-center">
+  <div class="items-container" *ngFor="let item of stepItem ; index as i">
+    <div class="item">
+      <div class="circle">{{item.stepNum}}</div>
+      <span>{{item.text}}</span>
+    </div>
+    <div class="line" *ngIf="i != 2"></div>
+  </div>
+</div>

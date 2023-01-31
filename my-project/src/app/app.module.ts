@@ -6,6 +6,7 @@ import {HeaderComponent} from './pages/header/header.component';
 import {AsideComponent} from './pages/aside/aside.component';
 import {HttpClientModule} from "@angular/common/http";
 import {InlineSVGModule} from "ng-inline-svg";
+import { StepComponent } from './components/step/step.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import {InlineSVGModule} from "ng-inline-svg";
     AppComponent,
     ArrayOfComponents,
     HeaderComponent,
-    AsideComponent
+    AsideComponent,
+    StepComponent
   ],
   imports: [
     AppRoutingModule,

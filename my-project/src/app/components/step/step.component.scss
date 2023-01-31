@@ -1,0 +1,32 @@
+.items-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  span {
+    width: 100%;
+    font-size: 9px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .line {
+    width: 60px;
+    height: 1px;
+    background-color: #000;
+  }
+
+  .item {
+    width: 100px;
+  }
+}
