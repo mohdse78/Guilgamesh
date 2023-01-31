@@ -2,9 +2,18 @@
   <header>
     <app-header></app-header>
   </header>
-  <div>
+  <div class="flex">
     <app-aside></app-aside>
-    <router-outlet></router-outlet>
+    <div class="w-full main-container">
+      <div class="flex items-center justify-between">
+        <h2 class="flex items-center">
+          <i inlineSVG="assets/icons/arrow-left.svg"></i>
+          Create new position
+        </h2>
+        <span class="cursor-pointer">Close</span>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </main>
 
