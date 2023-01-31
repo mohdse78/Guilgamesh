@@ -8,9 +8,9 @@ import {StepService} from "../../modules/core/services/step.service";
 })
 export class StepComponent implements OnInit {
   stepItem: any[] = [
-    {stepNum: '1', text: 'Position Information'},
-    {stepNum: '2', text: 'Requirement'},
-    {stepNum: '3', text: 'Tagline'},
+    {stepNum: '1', text: 'Position Information', route: ''},
+    {stepNum: '2', text: 'Requirement', route: 'second'},
+    {stepNum: '3', text: 'Tagline', route: 'third'},
   ];
 
   level!: number;
