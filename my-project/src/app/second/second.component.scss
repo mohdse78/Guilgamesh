@@ -3,25 +3,40 @@
   align-items: center;
   color: var(--secondary);
 
-  .block-header{
-    margin: 40px 0;
-    font-weight: 400;
+  > div {
+    margin: 0 171px;
+    width: 554px;
+    height: 420px;
+  }
+
+  .dropdown-inputs {
+
+    .input-label {
+      display: block;
+    }
   }
 
   .footer-btn {
+    justify-content: space-between;
+    align-items: center;
+
     div {
-      justify-content: space-between;
-      align-items: center;
       width: 168px;
       padding: 13px 24px;
       font-weight: 500;
       text-align: center;
+
+      a{
+        text-decoration: none;
+        cursor: pointer;
+      }
     }
 
     .next-btn {
       background: var(--secondary);
       color: var(--white);
       border-radius: 6px;
+      cursor: pointer;
     }
   }
 }
