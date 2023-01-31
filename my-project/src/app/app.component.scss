@@ -1,5 +1,7 @@
 .main-container {
-  padding: 40px 80px 0 24px;
+  padding: 40px 80px 40px 24px;
+  height: calc(100vh - 100px);
+  overflow: auto;
 
   h2 {
     font-size: 32px;
