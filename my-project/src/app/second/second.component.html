@@ -1,51 +1,73 @@
 <div class="flex second-body">
   <div>
-    <div class="block-header">
+    <div class="mb-10">
       <p>In this page you can choose position information.</p>
     </div>
-    <div class="flex">
-      <div class="w-2/4">
-        <label>Age</label>
-        <div class="relative inline-block text-left">
-          <div>
-            <button type="button" class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button" aria-expanded="true" aria-haspopup="true">
-              Options
-              <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-              </svg>
-            </button>
-          </div>
-          <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-            <div class="py-1" role="none">
-              <a href="" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">20-35</a>
-              <a href="" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">35-50</a>
-              <a href="" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">50-65</a>
-            </div>
-          </div>
+    <div class="mb-10">
+      <div class="flex dropdown-inputs">
+        <div class="w-2/4">
+          <label for="ages" class="input-label">Age</label>
+          <select id="ages" class="form-group">
+            <option selected>Choose a country</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+          </select>
+
+        </div>
+        <div class="w-2/4">
+          <label for="gender" class="input-label">Gender</label>
+          <select id="gender" class="form-group">
+            <option selected>Choose a gender</option>
+            <option value="Man">Man</option>
+            <option value="Woman">Woman</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex">
+        <div class="w-2/4">
+          <label for="population" class="input-label">Visible minority population</label>
+          <select id="population" class="form-group">
+            <option selected>Choose a continent</option>
+            <option value="SAsia">South Asian</option>
+            <option value="NAsia">North Asian</option>
+            <option value="SAfrica">South Africa</option>
+            <option value="NAfrica">North Africa</option>
+            <option value="SEurope">South Europe</option>
+            <option value="NEurope">North Europe</option>
+            <option value="SAmerica">South America</option>
+            <option value="NAmerica">North America</option>
+            <option value="Australia">Australia</option>
+          </select>
+        </div>
+        <div class="w-2/4">
+          <label for="disabilities" class="input-label">Disability condition</label>
+          <select id="disabilities" class="form-group">
+            <option selected>Choose a Disability</option>
+            <option value="color-blind">red-green color blindness</option>
+            <option value="Blind">Blind</option>
+            <option value="Paralyzed">Paralyzed</option>
+            <option value="Chor">Chor</option>
+          </select>
         </div>
       </div>
       <div class="w-2/4">
-        <label>Gender</label>
-        <input>
+        <label for="status" class="input-label">Indigenous Status</label>
+        <select id="status" class="form-group">
+          <option selected>Choose a status</option>
+          <option value="India">India</option>
+          <option value="Iran">Iran</option>
+          <option value="China">China</option>
+          <option value="Japan">Japan</option>
+          <option value="Turkey">Turkey</option>
+          <option value="Iraq">Iraq</option>
+        </select>
       </div>
     </div>
-    <div class="flex">
-      <div class="w-2/4">
-        <label>Visible minority population</label>
-        <input>
-      </div>
-      <div class="w-2/4">
-        <label>Disability condition</label>
-        <input>
-      </div>
-    </div>
-    <div class="flex justify-start w-2/4">
-      <label>Indigenous Status</label>
-      <input>
-    </div>
-    <div class="flex justify-between items-center footer-btn">
-      <div>Skip</div>
-      <div class="next-btn">Next</div>
+    <div class="flex footer-btn">
+      <div><a [routerLink]="['../third']">Skip</a></div>
+      <div class="next-btn"><a [routerLink]="['../third']">Next</a></div>
     </div>
   </div>
 
