@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {StepService} from "../modules/core/services/step.service";
 
 @Component({
   selector: 'app-third',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ThirdComponent {
 
+  constructor(private stepService: StepService) {
+  }
+
+  ngOnInit(): void {
+    this.stepService.setLevel(3);
+  }
 }

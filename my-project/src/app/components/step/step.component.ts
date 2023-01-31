@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {StepService} from "../../modules/core/services/step.service";
 
 @Component({
   selector: 'app-step',
@@ -12,6 +13,14 @@ export class StepComponent implements OnInit {
     {stepNum: '3', text: 'Tagline'},
   ];
 
+  level!: number;
+
+  constructor(private stepService: StepService) {
+  }
+
   ngOnInit(): void {
+    this.stepService.stepLevelSubject.subscribe(res => {
+      this.level = res;
+    });
   }
 }

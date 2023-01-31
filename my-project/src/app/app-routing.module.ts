@@ -3,7 +3,6 @@ import {RouterModule, Routes} from '@angular/router';
 import {FirstComponent} from "./first/first.component";
 import {SecondComponent} from "./second/second.component";
 import {ThirdComponent} from "./third/third.component";
-import {StepComponent} from "./components/step/step.component";
 
 const routes: Routes = [
   {
@@ -11,11 +10,15 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: StepComponent
+        component: FirstComponent,
       },
       {
         path: 'second',
-        component: SecondComponent
+        component: SecondComponent,
+      },
+      {
+        path: 'third',
+        component: ThirdComponent,
       },
     ]
   }
