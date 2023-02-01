@@ -5,10 +5,16 @@ main {
 
   select.form-group {
     color: var(--secondary);
+    font-weight: 500;
   }
 
   textarea {
     min-height: 160px;
+  }
+
+  button {
+    color: var(--primary);
+    font-weight: 700;
   }
 
   .btn {
