@@ -6,7 +6,8 @@ import {HeaderComponent} from './pages/header/header.component';
 import {AsideComponent} from './pages/aside/aside.component';
 import {HttpClientModule} from "@angular/common/http";
 import {InlineSVGModule} from "ng-inline-svg";
-import { StepComponent } from './components/step/step.component';
+import {StepComponent} from './components/step/step.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -21,6 +22,8 @@ import { StepComponent } from './components/step/step.component';
     AppRoutingModule,
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     InlineSVGModule.forRoot()
   ],
   providers: [],

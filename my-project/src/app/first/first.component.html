@@ -1,97 +1,101 @@
 <main>
   <div class="text-secondary my-5">In this page you can choose position information.</div>
 
-  <div class="w-full my-5">
-    <label for="position-title">Position Title</label>
-    <input class="form-group" type="text" id="position-title" placeholder="Data Analysis in crypto market"/>
-  </div>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="w-full my-5">
+      <label for="position-title">Position Title</label>
+      <input class="form-group" type="text" id="position-title" placeholder="Data Analysis in crypto market"
+             formControlName="title"/>
+    </div>
 
-  <div class="w-full flex items-center my-10">
-    <div class="w-6/12 pr-5">
-      <label for="Contract">Contract Type</label>
-      <select id="Contract"
-              class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a country</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
-      </select>
+    <div class="w-full flex items-center my-10">
+      <div class="w-6/12 pr-5">
+        <label for="Contract">Contract Type</label>
+        <select id="Contract"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option selected>Choose a country</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
+      <div class="w-6/12">
+        <label for="Availability">Availability</label>
+        <select id="Availability"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option selected>Choose a country</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
     </div>
-    <div class="w-6/12">
-      <label for="Availability">Availability</label>
-      <select id="Availability"
-              class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a country</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
-      </select>
-    </div>
-  </div>
-
-
-  <div class="w-full flex items-center my-10">
-    <div class="w-6/12 pr-5">
-      <label for="Payment">Payment Type</label>
-      <select id="Payment"
-              class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a country</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
-      </select>
-    </div>
-    <div class="w-6/12">
-      <label for="payment-amount">Payment Amount</label>
-      <select id="payment-amount"
-              class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a country</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
-      </select>
-    </div>
-  </div>
 
 
-  <div class="w-full flex items-center my-10">
-    <div class="w-6/12 pr-5">
-      <label for="Location">Location</label>
-      <select id="Location"
-              class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a country</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
-      </select>
+    <div class="w-full flex items-center my-10">
+      <div class="w-6/12 pr-5">
+        <label for="Payment">Payment Type</label>
+        <select id="Payment"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option selected>Choose a country</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
+      <div class="w-6/12">
+        <label for="payment-amount">Payment Amount</label>
+        <select id="payment-amount"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option selected>Choose a country</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
     </div>
-    <div class="w-6/12">
-      <label for="Duration">Duration</label>
-      <select id="Duration"
-              class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a country</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
-      </select>
-    </div>
-  </div>
 
-  <div class="w-full flex items-center my-20">
-    <div class="w-full">
-      <label for="Location">Poroject description</label>
-      <textarea class="form-group" placeholder="Add extra description"></textarea>
-    </div>
-  </div>
 
-  <div class="text-end">
-    <button class="btn" [routerLink]="['/second']">Next</button>
-  </div>
+    <div class="w-full flex items-center my-10">
+      <div class="w-6/12 pr-5">
+        <label for="Location">Location</label>
+        <select id="Location"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option selected>Choose a country</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
+      <div class="w-6/12">
+        <label for="Duration">Duration</label>
+        <select id="Duration"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option selected>Choose a country</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="w-full flex items-center my-20">
+      <div class="w-full">
+        <label for="Location">Poroject description</label>
+        <textarea class="form-group" placeholder="Add extra description" title="description"></textarea>
+      </div>
+    </div>
+
+    <div class="text-end">
+      <button class="btn" [routerLink]="['/second']" type="submit">Next</button>
+    </div>
+
+  </form>
 
 </main>
