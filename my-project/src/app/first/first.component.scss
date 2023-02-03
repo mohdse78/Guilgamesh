@@ -22,5 +22,21 @@ main {
     padding: 14px 70px;
     border-radius: 6px;
   }
+
+  .payment-amount {
+    position: relative;
+
+    span {
+      position: absolute;
+      color: var(--secondary);
+      right: 25px;
+      top: 40px;
+      font-size: 18px;
+
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
 }
 

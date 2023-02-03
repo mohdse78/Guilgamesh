@@ -1,76 +1,70 @@
 <main>
   <div class="text-secondary my-5">In this page you can choose position information.</div>
+  <form [formGroup]="myForm">
+    <div class="w-full flex items-center my-10">
+      <div class="w-2/4 pr-5">
+        <label for="ages" class="input-label">Age</label>
+        <select id="ages" class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
 
-  <div class="w-full flex items-center my-10">
-    <div class="w-2/4 pr-5">
-      <label for="ages" class="input-label">Age</label>
-      <select id="ages" class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a country</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
-      </select>
+      </div>
+      <div class="w-2/4">
+        <label for="gender" class="input-label">Gender</label>
+        <select id="gender" formControlName="gender"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option [value]="0">Male</option>
+          <option [value]="1">Female</option>
+          <option [value]="2">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="w-full flex items-center my-10">
+      <div class="w-2/4 pr-5">
+        <label for="population" class="input-label">Visible minority population</label>
+        <select id="population" formControlName="minority"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option *ngFor="let item of minority" [value]="item.key">{{item.value}}</option>
+        </select>
+      </div>
+      <div class="w-2/4">
+        <label for="disabilities" class="input-label">Disability condition</label>
+        <select id="disabilities" formControlName="disability"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option *ngFor="let item of disability" [value]="item.key">{{item.value}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="w-full flex items-center my-10">
+      <div class="w-2/4 pr-5">
+        <label for="status" class="input-label">Indigenous Status</label>
+        <select id="status" formControlName="indigenous"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option [value]="0">Yes</option>
+          <option [value]="1">No</option>
+          <option [value]="2">Not Say</option>
+        </select>
+      </div>
 
+      <div class="w-2/4">
+        <label for="University" class="input-label">University</label>
+        <select id="University" formControlName="universityId"
+                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
+          <option *ngFor="let university of universities" [value]="university.key">{{university.title}}</option>
+        </select>
+      </div>
     </div>
-    <div class="w-2/4">
-      <label for="gender" class="input-label">Gender</label>
-      <select id="gender" class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a gender</option>
-        <option value="Man">Man</option>
-        <option value="Woman">Woman</option>
-      </select>
+    <div class="flex footer-btn my-20">
+      <div class="skip">
+        <button [routerLink]="['']">Skip</button>
+      </div>
+      <div>
+        <button class="btn" [routerLink]="['/third']">Next</button>
+      </div>
     </div>
-  </div>
-  <div class="w-full flex items-center my-10">
-    <div class="w-2/4 pr-5">
-      <label for="population" class="input-label">Visible minority population</label>
-      <select id="population"
-              class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a continent</option>
-        <option value="SAsia">South Asian</option>
-        <option value="NAsia">North Asian</option>
-        <option value="SAfrica">South Africa</option>
-        <option value="NAfrica">North Africa</option>
-        <option value="SEurope">South Europe</option>
-        <option value="NEurope">North Europe</option>
-        <option value="SAmerica">South America</option>
-        <option value="NAmerica">North America</option>
-        <option value="Australia">Australia</option>
-      </select>
-    </div>
-    <div class="w-2/4">
-      <label for="disabilities" class="input-label">Disability condition</label>
-      <select id="disabilities"
-              class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-        <option selected>Choose a Disability</option>
-        <option value="color-blind">red-green color blindness</option>
-        <option value="Blind">Blind</option>
-        <option value="Paralyzed">Paralyzed</option>
-        <option value="Chor">Chor</option>
-      </select>
-    </div>
-  </div>
-  <div class="w-2/4 pr-5">
-    <label for="status" class="input-label">Indigenous Status</label>
-    <select id="status" class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-      <option selected>Choose a status</option>
-      <option value="India">India</option>
-      <option value="Iran">Iran</option>
-      <option value="China">China</option>
-      <option value="Japan">Japan</option>
-      <option value="Turkey">Turkey</option>
-      <option value="Iraq">Iraq</option>
-    </select>
-  </div>
-  <div class="flex footer-btn my-20">
-    <div class="skip">
-      <button [routerLink]="['']">Skip</button>
-    </div>
-    <div>
-      <button class="btn" [routerLink]="['/third']">Next</button>
-    </div>
-  </div>
-
+  </form>
 
 </main>

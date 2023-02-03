@@ -11,24 +11,20 @@
     <div class="w-full flex items-center my-10">
       <div class="w-6/12 pr-5">
         <label for="Contract">Contract Type</label>
-        <select id="Contract"
+        <select id="Contract" formControlName="contractType"
                 class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-          <option selected>Choose a country</option>
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
+          <option [value]="0">In Person</option>
+          <option [value]="1">Remote</option>
+          <option [value]="2">Hybrid</option>
         </select>
       </div>
       <div class="w-6/12">
         <label for="Availability">Availability</label>
-        <select id="Availability"
+        <select id="Availability" formControlName="availability"
                 class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-          <option selected>Choose a country</option>
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
+          <option [value]="0">Full Time</option>
+          <option [value]="1">Part Time</option>
+          <option [value]="2">Seasonal Say</option>
         </select>
       </div>
     </div>
@@ -37,25 +33,18 @@
     <div class="w-full flex items-center my-10">
       <div class="w-6/12 pr-5">
         <label for="Payment">Payment Type</label>
-        <select id="Payment"
+        <select id="Payment" formControlName="paymentType"
                 class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-          <option selected>Choose a country</option>
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
+          <option [value]="0">Hourly</option>
+          <option [value]="1">Daily</option>
+          <option [value]="2">Weekly</option>
+          <option [value]="3">Monthly</option>
         </select>
       </div>
-      <div class="w-6/12">
+      <div class="w-6/12 payment-amount">
         <label for="payment-amount">Payment Amount</label>
-        <select id="payment-amount"
-                class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-          <option selected>Choose a country</option>
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
-        </select>
+        <input class="form-group" type="text" id="payment-amount" placeholder="100$" formControlName="amount"/>
+        <span>per hour</span>
       </div>
     </div>
 
@@ -63,16 +52,12 @@
     <div class="w-full flex items-center my-10">
       <div class="w-6/12 pr-5">
         <label for="Location">Location</label>
-        <select id="Location"
+        <select id="Location" formControlName="cityId"
                 class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-          <option selected>Choose a country</option>
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
+          <option *ngFor="let city of cities" [value]="city.key">{{city.value}}</option>
         </select>
       </div>
-      <div class="w-6/12">
+      <div class="w-6/12 payment-amount">
         <label for="Duration">Duration</label>
         <select id="Duration"
                 class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
@@ -87,13 +72,14 @@
 
     <div class="w-full flex items-center my-20">
       <div class="w-full">
-        <label for="Location">Poroject description</label>
-        <textarea class="form-group" placeholder="Add extra description" title="description"></textarea>
+        <label for="Location">Project description</label>
+        <textarea class="form-group" placeholder="Add extra description" title="description"
+                  formControlName="description"></textarea>
       </div>
     </div>
 
     <div class="text-end">
-      <button class="btn" [routerLink]="['/second']" type="submit">Next</button>
+      <button class="btn" type="submit">Next</button>
     </div>
 
   </form>

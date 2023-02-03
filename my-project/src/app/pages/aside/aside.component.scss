@@ -2,6 +2,7 @@
   width: 220px;
   background-color: var(--primary);
   height: calc(100vh - 100px);
+  overflow: auto;
 
   .item-container {
     display: flex;
