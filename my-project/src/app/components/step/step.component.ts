@@ -14,6 +14,7 @@ export class StepComponent implements OnInit {
   ];
 
   level!: number;
+  status!: boolean;
 
   constructor(private stepService: StepService) {
   }
@@ -22,5 +23,9 @@ export class StepComponent implements OnInit {
     this.stepService.stepLevelSubject.subscribe(res => {
       this.level = res;
     });
+
+    this.stepService.stepStatusSubject.subscribe(res => {
+      this.status = res;
+    })
   }
 }

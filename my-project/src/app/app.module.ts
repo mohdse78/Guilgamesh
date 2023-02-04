@@ -16,7 +16,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     ArrayOfComponents,
     HeaderComponent,
     AsideComponent,
-    StepComponent
+    StepComponent,
   ],
   imports: [
     AppRoutingModule,

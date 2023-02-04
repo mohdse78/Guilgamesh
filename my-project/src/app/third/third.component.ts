@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {StepService} from "../modules/core/services/step.service";
 import {stringify} from "postcss";
+import {Router, Routes} from "@angular/router";
 
 @Component({
   selector: 'app-third',
@@ -17,7 +18,9 @@ export class ThirdComponent {
   nameTag: any;
   newcard: any;
 
-  constructor(private stepService: StepService) {
+  constructor(private stepService: StepService,
+              private router: Router
+  ) {
   }
 
   ngOnInit(): void {
@@ -26,7 +29,8 @@ export class ThirdComponent {
       this.cards = this.cards.concat(JSON.parse(<string>localStorage.getItem('cards')));
   }
 
-  // addingCard() {
-  //   localStorage.setItem('done', JSON.stringify(this.newcard));
-  // }
+
+  submit(){
+    this.router.navigate(['info'])
+  }
 }
