@@ -20,7 +20,7 @@ import {MatNativeDateModule} from "@angular/material/core";
     ArrayOfComponents,
     HeaderComponent,
     AsideComponent,
-    StepComponent
+    StepComponent,
   ],
   imports: [
     AppRoutingModule,

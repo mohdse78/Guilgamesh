@@ -1,0 +1,93 @@
+<main class="text-secondary">
+  <section class="roadlane">
+    <div>
+      <h3>Road Lane Line Detection</h3>
+    </div>
+    <div class="flex prof-uni pr-20">
+      <div class="flex">
+        <div class="mr-1"><i [inlineSVG]="'assets/icons/Profile-img.svg'"></i></div>
+        <div><span>Yann LeCun</span></div>
+      </div>
+      <div class="flex">
+        <div class="mr-1"><i [inlineSVG]="'assets/icons/Group.svg'"></i></div>
+        <div><span>MacEwan University</span></div>
+      </div>
+    </div>
+    <div class="line">
+      <i [inlineSVG]="'assets/icons/Line62.svg'"></i>
+    </div>
+    <div class="flex prof-uni pr-20">
+      <div class="flex">
+        <div class="mr-5">
+          <button class="btn-message">Message</button>
+        </div>
+        <div>
+          <button class="btn-apply">Apply</button>
+        </div>
+      </div>
+      <div><i [inlineSVG]="'assets/icons/Bookmark2.svg'"></i></div>
+    </div>
+  </section>
+  <section class="table">
+    <table>
+      <tr>
+        <td>Salary</td>
+        <td>100$ / per hour</td>
+      </tr>
+      <tr>
+        <td>Type</td>
+        <td>Remote</td>
+      </tr>
+      <tr>
+        <td>Timeframe</td>
+        <td>3 Months</td>
+      </tr>
+      <tr>
+        <td>Availability</td>
+        <td>Full-time</td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td>Ottawa</td>
+      </tr>
+    </table>
+  </section>
+  <section class="pos-detail">
+    <h3>Positions Details</h3>
+    <p>What is the main goal for the project?</p>
+    <p>
+      This project is only available to students that are participating in the Level Up program.
+    </p>
+    <p class="my-5">We would like a new website for our organization.</p>
+    <p>
+
+      We would like to work with students to develop a new website for us.<br>
+      Students should be prepared to:
+    </p>
+    <p class="mt-5 mb-10">
+
+      Create a design proposal including wireframes or low-fidelity mockups for our company's review.<br>
+      Build a fully-functioning website, with our assistance in providing content and copy.<br>
+      Provide training on updating and maintaining the site.<br>
+      What tasks will students need to complete to achieve the project goal?<br>
+      A fully-functioning website, with our assistance in providing content and copy. The website should be built on
+      Wordpress.<br><br>
+    </p>
+    <p>
+      How will you support students in completing the project?<br>
+      Students will connect directly with the employer for mentorship and supervision throughout the project.
+    <p>
+    <p class="my-5">
+      The employer will be available through various platforms such as Zoom ,phone, email, text.</p>
+    <p>
+      The employer will provide any required images, videos, and copy.</p>
+  </section>
+  <section class="tagline">
+    <h3>Tagline</h3>
+    <div class="flex tag-box mt-10">
+      <div class="tag-card mb-2.5 mr-5" *ngFor="let card of cards">
+        <p>{{card.name}}</p>
+      </div>
+    </div>
+  </section>
+</main>

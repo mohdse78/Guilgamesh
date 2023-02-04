@@ -3,6 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {FirstComponent} from "./first/first.component";
 import {SecondComponent} from "./second/second.component";
 import {ThirdComponent} from "./third/third.component";
+import { PersonInfoComponent } from './pages/person-info/person-info.component';
+
 
 const routes: Routes = [
   {
@@ -20,6 +22,10 @@ const routes: Routes = [
         path: 'third',
         component: ThirdComponent,
       },
+      {
+        path:'info',
+        component: PersonInfoComponent
+      }
     ]
   }
 ];
@@ -31,5 +37,5 @@ const routes: Routes = [
 export class AppRoutingModule {
 }
 
-export const ArrayOfComponents = [FirstComponent, SecondComponent, ThirdComponent];
+export const ArrayOfComponents = [FirstComponent, SecondComponent, ThirdComponent, PersonInfoComponent];
 

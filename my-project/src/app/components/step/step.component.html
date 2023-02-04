@@ -1,4 +1,4 @@
-<div class="flex justify-center items-center parent-element">
+<div class="flex justify-center items-center parent-element" *ngIf="status">
   <div class="items-container" *ngFor="let item of stepItem ; index as i">
     <div class="item" [class.divider]="i==1">
       <div class="circle-item">
