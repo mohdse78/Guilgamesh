@@ -4,18 +4,18 @@ main {
   padding: 30px 0;
 
 
-  .roadlane{
+  .roadlane {
     width: 60%;
     margin: 2.5rem 0.5rem;
 
-    .prof-uni{
+    .prof-uni {
       justify-content: space-between;
       align-items: center;
       font-weight: 500;
       margin-top: 3rem;
 
-      div{
-        justify-content:start ;
+      div {
+        justify-content: start;
         align-items: center;
       }
     }
@@ -25,7 +25,7 @@ main {
     font-weight: 700;
     background-color: var(--secondary);
     color: #fff;
-    padding: 14px 25px;
+    padding: 14px 45px;
     border-radius: 6px;
   }
 
@@ -38,12 +38,36 @@ main {
     border-radius: 6px;
   }
 
-  .line{
+  .line {
     //width: 60%;
     margin: 1rem 0;
   }
 
-  .pos-detail{
+  .table {
+    width: 60%;
+
+    table {
+      width: 100%;
+      margin: 2rem 1rem;
+
+      tr {
+        width: 90%;
+        border-bottom: 1px solid var(--white);
+
+        td{
+          padding: 20px 0px;
+
+        }
+
+        td:nth-child(2){
+          text-align: end;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .pos-detail {
     width: 90%;
     margin: 2.5rem 2rem 3.5rem 2rem;
 
