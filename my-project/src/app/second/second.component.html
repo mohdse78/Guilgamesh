@@ -1,16 +1,16 @@
 <main>
   <div class="text-secondary my-5">In this page you can choose position information.</div>
-  <form [formGroup]="myForm">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
     <div class="w-full flex items-center my-10">
-      <div class="w-2/4 pr-5">
-        <label for="ages" class="input-label">Age</label>
-        <select id="ages" class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-          <option value="US">United States</option>
-          <option value="CA">Canada</option>
-          <option value="FR">France</option>
-          <option value="DE">Germany</option>
-        </select>
-
+      <div class="w-2/4 pr-5 flex">
+        <div class="w-2/4 pr-5">
+          <label for="age-min" class="input-label">Age Min</label>
+          <input class="form-group" id="age-min" formControlName="ageMin">
+        </div>
+        <div class="w-2/4">
+          <label for="age-max" class="input-label">Age Max</label>
+          <input class="form-group" id="age-max" formControlName="ageMax">
+        </div>
       </div>
       <div class="w-2/4">
         <label for="gender" class="input-label">Gender</label>
@@ -53,7 +53,7 @@
         <label for="University" class="input-label">University</label>
         <select id="University" formControlName="universityId"
                 class="form-group border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5">
-          <option *ngFor="let university of universities" [value]="university.key">{{university.title}}</option>
+          <option *ngFor="let university of universities" [value]="university.id">{{university.title}}</option>
         </select>
       </div>
     </div>
@@ -62,7 +62,7 @@
         <button [routerLink]="['']">Skip</button>
       </div>
       <div>
-        <button class="btn" [routerLink]="['/third']">Next</button>
+        <button class="btn">Next</button>
       </div>
     </div>
   </form>

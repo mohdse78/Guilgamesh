@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {StepService} from "../modules/core/services/step.service";
-import {stringify} from "postcss";
-import {Router, Routes} from "@angular/router";
+import {Router} from "@angular/router";
+import {FormBuilder, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-third',
@@ -17,20 +17,41 @@ export class ThirdComponent {
   ];
   nameTag: any;
   newcard: any;
+  previousForm!: any;
+  myForm!: FormGroup;
 
   constructor(private stepService: StepService,
+              private fb: FormBuilder,
               private router: Router
   ) {
+    this.previousForm = this.router.getCurrentNavigation()?.extras.state;
   }
 
   ngOnInit(): void {
     this.stepService.setLevel(3);
     if (localStorage.getItem('cards'))
       this.cards = this.cards.concat(JSON.parse(<string>localStorage.getItem('cards')));
+
+    this.myForm = this.fb.group({
+      ageMin: '',
+      ageMax: '',
+      gender: null,
+      minority: null,
+      disability: null,
+      indigenous: null,
+      universityId: null,
+      title: '',
+      description: '',
+      contractType: null,
+      paymentType: null,
+      availability: null,
+      amount: '',
+      cityId: null
+    });
   }
 
 
-  submit(){
-    this.router.navigate(['info'])
+  submit() {
+    this.router.navigate(['info']);
   }
 }

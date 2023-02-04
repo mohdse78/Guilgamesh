@@ -25,10 +25,10 @@ export class SecondComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // if (!this.previousForm) {
-    //   this.router.navigate(['']);
-    //   return;
-    // }
+    if (!this.previousForm) {
+      this.router.navigate(['']);
+      return;
+    }
 
     this.getMinority();
     this.getDisability();
@@ -73,5 +73,9 @@ export class SecondComponent implements OnInit {
     this.commonService.getUniversity().subscribe(res => {
       this.universities = res;
     });
+  }
+
+  onSubmit() {
+    this.router.navigate(['/third'], {state: {data: this.myForm.value}});
   }
 }

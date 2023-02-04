@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {StepService} from "../modules/core/services/step.service";
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup} from "@angular/forms";
 import {CitiesService} from "../modules/core/services/cities.service";
 import {Router} from "@angular/router";
 
@@ -40,8 +40,8 @@ export class FirstComponent implements OnInit {
       availability: null,
       amount: '',
       cityId: null,
-      validFrom: new FormControl<Date | null>(null),
-      validTo: new FormControl<Date | null>(null)
+      validFrom: null,
+      validTo: null
     });
   }
 
@@ -52,12 +52,7 @@ export class FirstComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.myForm.get('validForm')?.value)
-    let validForm = this.myForm.get('validForm')?.value
-    this.myForm.get('validForm')?.setValue(validForm.toISOString());
-
-    debugger
-    // this.router.navigate(['/second'], {state: {data: this.myForm.value}})
+    this.router.navigate(['/second'], {state: {data: this.myForm.value}});
   }
 
 }
