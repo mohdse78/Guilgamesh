@@ -76,6 +76,10 @@ h3 {
 
 .date-picker {
   border: 1px solid var(--secondary);
+  overflow: hidden;
+  border-radius: 6px;
+  height: 50px;
+  width: 100%;
 
   .mdc-text-field--filled:not(.mdc-text-field--disabled) {
     background-color: #fff;

@@ -1,11 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-aside',
   templateUrl: './aside.component.html',
   styleUrls: ['./aside.component.scss']
 })
-export class AsideComponent {
+export class AsideComponent implements OnInit {
   items: any[] = [
     {id: 1, title: 'Feed', icon: 'feed.svg'},
     {id: 2, title: 'Just OKs', icon: 'check-circle.svg'},
@@ -16,6 +16,8 @@ export class AsideComponent {
   ];
   activeGiftStyle: boolean = false;
 
+  ngOnInit(): void {
+  }
 
   selectedItem(id: number) {
     this.activeGiftStyle = (id == 0);

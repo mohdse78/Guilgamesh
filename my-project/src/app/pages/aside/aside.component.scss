@@ -6,13 +6,13 @@
 
   .item-container {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   .gift-item {
     margin-top: 10rem;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     list-style: none;
     color: var(--secondary);
     cursor: pointer;
