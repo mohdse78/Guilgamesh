@@ -10,7 +10,10 @@
           <i inlineSVG="assets/icons/arrow-left.svg"></i>
           Create new position
         </h2>
-        <span class="cursor-pointer text-secondary">Close</span>
+        <div class="flex items-center">
+          <span class="cursor-pointer text-secondary pr-5 close">Close</span>
+          <button class="btn" *ngIf="!publishBtn">Publish</button>
+        </div>
       </div>
       <div class="components">
         <app-step></app-step>

@@ -48,10 +48,12 @@ export class ThirdComponent {
       amount: '',
       cityId: null
     });
+
+    this.myForm.patchValue(this.previousForm.data);
   }
 
 
   submit() {
-    this.router.navigate(['info']);
+    this.router.navigate(['info'], {state: {data: this.myForm.value}});
   }
 }
