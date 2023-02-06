@@ -25,4 +25,8 @@ export class CommonsService {
   getDisability() {
     return this.http.get(`${environment.apiUrl}/commons/disability`);
   }
+
+  post(value: any){
+    this.http.post(`${environment.apiUrl}/position/add`, value);
+  }
 }

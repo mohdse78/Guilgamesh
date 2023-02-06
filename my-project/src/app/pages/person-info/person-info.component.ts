@@ -16,14 +16,18 @@ export class PersonInfoComponent implements OnInit, OnDestroy {
     {id: 3, name: 'Cryptocurrency'},
     {id: 4, name: 'Business intelligence'}
   ];
+  myForm: any;
+
 
   constructor(private stepService: StepService,
               private router: Router
   ) {
+    this.myForm = this.router.getCurrentNavigation()?.extras.state;
   }
 
   ngOnInit(): void {
     this.stepService.setStatus(false);
+    console.log(this.myForm.value)
   }
 
   ngOnDestroy(): void {
