@@ -1,18 +1,18 @@
 <main *ngIf="!loading">
   <div class="text-secondary my-5">In this page you can choose taglines.</div>
   <div class="w-full my-10">
-    <label for="tagline-title">Tagline</label>
-    <div class="form-group flex add-tagline">
-      <div class="w-full">
-        <input type="text" id="tagline-title" placeholder="crypto market"/>
-      </div>
-      <div>
-        <i [inlineSVG]="'assets/icons/plus1.svg'" class="cursor-pointer"></i>
-      </div>
-    </div>
+    <!--    <label for="tagline-title">Tagline</label>-->
+    <!--    <div class="form-group flex add-tagline">-->
+    <!--      <div class="w-full">-->
+    <!--        <input type="text" id="tagline-title" placeholder="crypto market"/>-->
+    <!--      </div>-->
+    <!--      <div>-->
+    <!--        <i [inlineSVG]="'assets/icons/plus1.svg'" class="cursor-pointer"></i>-->
+    <!--      </div>-->
+    <!--    </div>-->
 
     <label for="tagline-title">Tagline</label>
-    <mat-form-field class="example-chip-list w-full mb-4 pb-2">
+    <mat-form-field class="example-chip-list w-full mb-4 pb-2" id="tagline-title">
       <mat-chip-list #chipList>
         <!--        <mat-chip *ngFor="let skill of jobs" [selectable]="selectable" [removable]="removable">-->
         <!--          {{ skill.title }}-->
