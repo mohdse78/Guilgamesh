@@ -27,6 +27,7 @@ main {
 
       p {
         white-space: nowrap;
+        padding-left: 8px;
       }
     }
   }
@@ -34,5 +35,11 @@ main {
 
   button {
     font-weight: 700;
+  }
+
+  .remove {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
   }
 }

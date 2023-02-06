@@ -1,4 +1,4 @@
-<main>
+<main *ngIf="!loading">
   <div class="text-secondary my-5">In this page you can choose taglines.</div>
   <div class="w-full my-10">
     <label for="tagline-title">Tagline</label>
@@ -10,9 +10,30 @@
         <i [inlineSVG]="'assets/icons/plus1.svg'" class="cursor-pointer"></i>
       </div>
     </div>
+
+    <label for="tagline-title">Tagline</label>
+    <mat-form-field class="example-chip-list w-full mb-4 pb-2">
+      <mat-chip-list #chipList>
+        <!--        <mat-chip *ngFor="let skill of jobs" [selectable]="selectable" [removable]="removable">-->
+        <!--          {{ skill.title }}-->
+        <!--          <mat-icon matChipRemove>cancel</mat-icon>-->
+        <!--        </mat-chip>-->
+        <input placeholder="New skill..." #skillInput [matAutocomplete]="auto"
+               [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+               [matChipInputAddOnBlur]="addOnBlur"/>
+      </mat-chip-list>
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+        <mat-option *ngFor="let skill of allJob" [value]="skill.id">
+          {{ skill.title }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
     <div class="flex tag-box mt-10">
-      <div class="tag-card mb-2.5 mr-5" *ngFor="let card of cards">
-        <p>{{card.name}}</p>
+      <div class="tag-card mb-2.5 mr-5" *ngFor="let card of jobs">
+        <div class="flex justify-between items-center">
+          <i class="remove" inlineSVG="assets/icons/remove.svg" (click)="remove(card?.id)"></i>
+          <p>{{card.title}}</p>
+        </div>
       </div>
     </div>
   </div>

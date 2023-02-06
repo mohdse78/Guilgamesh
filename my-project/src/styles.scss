@@ -63,6 +63,10 @@ $my-project-theme: mat.define-light-theme((
   }
 }
 
+input:focus-visible {
+  outline: none;
+}
+
 label {
   display: block;
   margin-bottom: 6px;
@@ -91,6 +95,30 @@ h3 {
 
   .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before {
     border: none;
+  }
+}
+
+.example-chip-list {
+  border: 1px solid var(--secondary);
+  overflow: hidden;
+  border-radius: 6px;
+  width: 75%;
+  padding: 0;
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #fff;
+  }
+
+  .mat-mdc-form-field-bottom-align::before {
+    content: none;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before, .mdc-text-field--filled .mdc-line-ripple::after {
+    border: none;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #fff !important;
   }
 }
 

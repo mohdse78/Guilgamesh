@@ -41,7 +41,8 @@ export class FirstComponent implements OnInit {
       amount: '',
       cityId: null,
       validFrom: null,
-      validTo: null
+      validTo: null,
+      tagline: null
     });
   }
 

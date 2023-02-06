@@ -51,7 +51,10 @@ export class SecondComponent implements OnInit {
       paymentType: null,
       availability: null,
       amount: '',
-      cityId: null
+      cityId: null,
+      validFrom: null,
+      validTo: null,
+      tagline: null
     });
 
     this.myForm.patchValue(this.previousForm.data);
