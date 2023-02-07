@@ -41,4 +41,33 @@
       font-weight: bold;
     }
   }
+
+  .menu-box{
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1024px){
+
+  .aside-container {
+    width: 60px;
+    background-color: var(--primary);
+    height: calc(100vh - 100px);
+    overflow: auto;
+
+    .menu-box {
+      visibility: visible;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .item-container {
+      visibility: hidden;
+    }
+
+    .gift-item {
+      visibility: hidden;
+    }
+  }
 }
