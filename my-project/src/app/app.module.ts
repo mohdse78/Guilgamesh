@@ -14,6 +14,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatLegacyChipsModule} from "@angular/material/legacy-chips";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
     MatDatepickerModule,
     MatNativeDateModule,
     MatAutocompleteModule,
-    MatLegacyChipsModule
+    MatSidenavModule,
+    MatLegacyChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
