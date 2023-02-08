@@ -29,6 +29,7 @@ export class ThirdComponent {
   addOnBlur!: any;
   myForm!: FormGroup;
   loading: boolean = true;
+  taglines: any = [];
 
   constructor(private stepService: StepService,
               private fb: FormBuilder,
@@ -41,8 +42,6 @@ export class ThirdComponent {
 
   ngOnInit(): void {
     this.stepService.setLevel(3);
-
-    console.log(this.previousForm.data);
 
     this.getJobTitles();
 
@@ -73,6 +72,16 @@ export class ThirdComponent {
     this.commonService.getJobTitles().subscribe(res => {
       this.allJob = res;
       this.loading = false;
+
+      if (this.previousForm.data.tagline) {
+        this.allJob.map((item: any) => {
+          this.previousForm.data.tagline.map((tag: any) => {
+            if (item.id == tag.jobTitleId) {
+              this.jobs.push(item);
+            }
+          });
+        });
+      }
     });
   }
 
@@ -80,27 +89,27 @@ export class ThirdComponent {
     let selectedItem = this.allJob.find((item: any) => item.id == e.option.value);
     if (this.jobs.indexOf(selectedItem) < 0) {
       this.jobs.push(selectedItem);
+      this.taglines.push({
+        jobTitleId: selectedItem.id
+      });
+      this.myForm.get('tagline')?.setValue(this.taglines);
     }
   }
 
   remove(id: number) {
-    debugger
     let index = this.jobs.findIndex(item => item.id == id);
     this.jobs.splice(index, 1);
   }
 
   submit() {
-    let taglines: any = [];
-    this.jobs.map(item => {
-      taglines.push({
-        jobTitleId: item.id
+    if (this.myForm.valid) {
+      this.PositionService.postPosition(this.myForm.value).subscribe(() => {
+        this.router.navigate(['info'], {state: {data: this.myForm.value}});
       });
-    });
-
-    this.myForm.get('tagline')?.setValue(taglines);
-    if(this.myForm.valid){
-      this.PositionService.postPosition(this.myForm.value).subscribe();
     }
-    this.router.navigate(['info'], {state: {data: this.myForm.value}});
+  }
+
+  return() {
+    this.router.navigate(['/second'], {state: {data: this.myForm.value}});
   }
 }

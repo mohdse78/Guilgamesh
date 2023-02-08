@@ -19,7 +19,8 @@ export class FirstComponent implements OnInit {
               private citiesService: CitiesService,
               private router: Router
   ) {
-    this.previousForm = this.router.getCurrentNavigation()?.extras.state;
+    if (this.router.getCurrentNavigation()?.extras.state)
+      this.previousForm = this.router.getCurrentNavigation()?.extras.state;
   }
 
   ngOnInit(): void {
@@ -46,6 +47,9 @@ export class FirstComponent implements OnInit {
       validTo: null,
       tagline: null
     });
+
+    if (this.previousForm)
+      this.myForm.patchValue(this.previousForm.data);
   }
 
   getCities() {

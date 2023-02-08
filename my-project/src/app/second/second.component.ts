@@ -25,11 +25,11 @@ export class SecondComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.previousForm.data)
-    if (!this.previousForm) {
-      this.router.navigate(['']);
-      return;
-    }
+    // console.log(this.previousForm.data)
+    // if (!this.previousForm) {
+    //   this.router.navigate(['']);
+    //   return;
+    // }
 
     this.getMinority();
     this.getDisability();
@@ -81,5 +81,9 @@ export class SecondComponent implements OnInit {
 
   onSubmit() {
     this.router.navigate(['/third'], {state: {data: this.myForm.value}});
+  }
+
+  return() {
+    this.router.navigate([''], {state: {data: this.myForm.value}});
   }
 }

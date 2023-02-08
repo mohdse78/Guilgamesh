@@ -1,5 +1,5 @@
 <main class="text-secondary" *ngIf="loaded">
-  <section class="roadlane">
+  <section class="roadlane my-20 mx-auto">
     <div>
       <h3>{{myForm.data.title}}</h3>
     </div>
@@ -16,23 +16,23 @@
     <div class="line">
       <i [inlineSVG]="'assets/icons/Line62.svg'"></i>
     </div>
-    <div class="flex btn-box pr-20">
-      <div class="flex">
-        <div class="mr-5">
-          <button class="btn-message">Message</button>
-        </div>
-        <div>
-          <button class="btn-apply">Apply</button>
-        </div>
-      </div>
-      <div><i [inlineSVG]="'assets/icons/Bookmark2.svg'"></i></div>
-    </div>
+    <!--      <div class="flex btn-box pr-20">-->
+    <!--        <div class="flex">-->
+    <!--          <div class="mr-5">-->
+    <!--            <button class="btn-message">Message</button>-->
+    <!--          </div>-->
+    <!--          <div>-->
+    <!--            <button class="btn-apply">Apply</button>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--        <div><i [inlineSVG]="'assets/icons/Bookmark2.svg'"></i></div>-->
+    <!--      </div>-->
   </section>
-  <section class="table">
+  <section class="table my-20 mx-auto">
     <table>
       <tr>
         <td>Salary</td>
-        <td>{{myForm.data.amount}} / {{paymentType}}</td>
+        <td>{{myForm.data.amount}} / per hour</td>
       </tr>
       <tr>
         <td>Type</td>
@@ -52,11 +52,11 @@
       </tr>
     </table>
   </section>
-  <section class="pos-detail">
+  <section class="pos-detail my-20 mx-auto">
     <h3 class="mb-5">Positions Details</h3>
     <p>{{myForm.data.description}}</p>
   </section>
-  <section class="tagline">
+  <section class="tagline my-20 mx-auto">
     <h3>Tagline</h3>
     <div class="flex tag-box mt-10">
       <div class="tag-card mb-2.5 mr-5" *ngFor="let card of tagline; index as i">

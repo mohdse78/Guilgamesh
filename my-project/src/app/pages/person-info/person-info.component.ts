@@ -1,6 +1,5 @@
 import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {StepService} from "../../modules/core/services/step.service";
-import {FormBuilder} from "@angular/forms";
 import {CitiesService} from "../../modules/core/services/cities.service";
 import {Router} from "@angular/router";
 import {CommonsService} from "../../modules/core/services/commons.service";
@@ -35,7 +34,6 @@ export class PersonInfoComponent implements OnInit, AfterViewInit, OnDestroy {
     this.getUniversity();
     this.getLocation();
     this.getType();
-    this.getPaymentType();
     this.getTagline();
     this.getAvailibility();
     this.getTimeFram();
@@ -50,18 +48,6 @@ export class PersonInfoComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       })
     })
-  }
-
-  getPaymentType() {
-    if (this.myForm.data.paymentType == 0) {
-      this.paymentType = "per hour";
-    } else if (this.myForm.data.paymentType == 1) {
-      this.paymentType = "per day";
-    } else if (this.myForm.data.paymentType == 2) {
-      this.paymentType = "per week";
-    } else {
-      this.paymentType = "per month";
-    }
   }
 
   getLocation() {

@@ -42,4 +42,17 @@ main {
     height: 20px;
     cursor: pointer;
   }
+
+  .footer-btn {
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary);
+    font-weight: 700;
+
+    .skip{
+      text-align: center;
+      padding: 14px 70px;
+    }
+
+  }
 }
