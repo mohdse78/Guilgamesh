@@ -2,7 +2,7 @@
   <div class="items-container" *ngFor="let item of stepItem ; index as i">
     <div class="item" [class.divider]="i==1">
       <div class="circle-item">
-        <div class="circle" [class.selected]="level == i + 1">{{item.stepNum}}</div>
+        <div class="circle" [routerLink]="'/' + item.route" [class.selected]="level == i + 1">{{item.stepNum}}</div>
       </div>
       <div class="text">{{item.text}}</div>
     </div>
