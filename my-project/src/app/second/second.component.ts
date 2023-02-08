@@ -25,6 +25,7 @@ export class SecondComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.previousForm.data)
     if (!this.previousForm) {
       this.router.navigate(['']);
       return;

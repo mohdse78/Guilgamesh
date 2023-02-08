@@ -11,6 +11,7 @@ import {Router} from "@angular/router";
 })
 export class FirstComponent implements OnInit {
   myForm!: FormGroup;
+  previousForm!: any;
   cities!: any;
 
   constructor(private stepService: StepService,
@@ -18,6 +19,7 @@ export class FirstComponent implements OnInit {
               private citiesService: CitiesService,
               private router: Router
   ) {
+    this.previousForm = this.router.getCurrentNavigation()?.extras.state;
   }
 
   ngOnInit(): void {

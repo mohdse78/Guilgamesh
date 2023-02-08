@@ -3,6 +3,8 @@ import {StepService} from "../modules/core/services/step.service";
 import {Router} from "@angular/router";
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {CommonsService} from "../modules/core/services/commons.service";
+import {PositionService} from "../modules/core/services/position.service";
+
 
 @Component({
   selector: 'app-third',
@@ -31,13 +33,16 @@ export class ThirdComponent {
   constructor(private stepService: StepService,
               private fb: FormBuilder,
               private router: Router,
-              private commonService: CommonsService
+              private commonService: CommonsService,
+              private PositionService: PositionService
   ) {
     this.previousForm = this.router.getCurrentNavigation()?.extras.state;
   }
 
   ngOnInit(): void {
     this.stepService.setLevel(3);
+
+    console.log(this.previousForm.data);
 
     this.getJobTitles();
 
@@ -93,6 +98,9 @@ export class ThirdComponent {
     });
 
     this.myForm.get('tagline')?.setValue(taglines);
+    if(this.myForm.valid){
+      this.PositionService.postPosition(this.myForm.value).subscribe();
+    }
     this.router.navigate(['info'], {state: {data: this.myForm.value}});
   }
 }
