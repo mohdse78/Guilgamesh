@@ -1,0 +1,43 @@
+<main>
+  <section>
+    <h3>Messages</h3>
+    <div class="flex justify-between items-center my-5">
+      <div class="text-start search-box-input flex p-5">
+        <div>
+          <i [inlineSVG]="'assets/icons/search.svg'"></i>
+        </div>
+        <div class="ml-2">
+          <span>Search messages</span>
+        </div>
+      </div>
+      <div class="text-end">
+        <div class="new-message-btn flex">
+          <div>
+            <i [inlineSVG]="'assets/icons/plus.svg'"></i>
+          </div>
+          <div>
+            <span>New message</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message-list">
+      <div *ngFor="let chats of chatList" class="chat-box flex justify-between items-center">
+        <div class="flex">
+          <div class="profile-image">
+            <div class="image"><div>{{chats.profileImage}}</div></div>
+            <div class="is-online"><P>{{chats.isOnline}}</P></div>
+          </div>
+          <div class="chat-content p-5">
+            <p class="username">{{chats.personName}}</p>
+            <p>{{chats.lastPM}}</p>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="p-2">{{chats.lastDate}}</div>
+          <div class="chat-counter m-1"><div>{{chats.unreadMessages}}</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

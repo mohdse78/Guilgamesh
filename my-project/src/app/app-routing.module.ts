@@ -6,6 +6,7 @@ import {ThirdComponent} from "./third/third.component";
 import { PersonInfoComponent } from './pages/person-info/person-info.component';
 
 
+
 const routes: Routes = [
   {
     path: '',
@@ -25,6 +26,11 @@ const routes: Routes = [
       {
         path:'info',
         component: PersonInfoComponent
+      },
+      {
+        path: 'message',
+        loadChildren: () =>
+          import('./message/message.module').then((m) => m.MessageModule),
       }
     ]
   }
